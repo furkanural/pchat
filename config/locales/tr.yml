@@ -1,0 +1,21 @@
+tr:
+  layouts:
+        language: 'dil'
+  conversations:
+    new:
+      title: 'Bir konuşma kanalı oluşturmak için dügmeye tıklayınız'
+      info: 'Kullanıcı adı veya şifreye gerek yok.'
+      dialog:
+        title: 'Dil Ayarları'
+        body: "Görüntüleme Dilini Seçiniz.."
+        close: 'Kapat'
+    show:
+      title: 'Konuşma'
+      placeholder: 'mesaj yazınız...'
+      send: 'Gönder'
+      dialog:
+        title: 'Yeni Konuşma'
+        body: "Aşağıdaki URL'i karşı taraf ile paylaştıktan sonra konuşmaya başlayabilirsiniz"
+        close: 'Kapat'
+  messages:
+    title: 'kullanıcı'
