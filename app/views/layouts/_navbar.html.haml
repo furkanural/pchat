@@ -1,0 +1,24 @@
+%nav.navbar.navbar-inverse.navbar-static-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to 'P-Chat', root_path, class: 'navbar-brand'
+    #navbar.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        - if params['controller'] == 'conversations' and params['action'] == 'new'
+          %li.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              = t 'layouts.language'
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "#{root_url}?locale=de"} Deutsch
+              %li
+                %a{:href => "#{root_url}?locale=en"} English
+              %li
+                %a{:href => "#{root_url}?locale=tr"} Türkçe
+    / /.nav-collapse

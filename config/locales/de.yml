@@ -1,0 +1,21 @@
+de:
+  layouts:
+      language: 'sprache'
+  conversations:
+    new:
+      title: 'Klicken Sie auf die Schaltfläche zum Erstellen eines Sprachkanal'
+      info: 'Sie brauchen nicht einen Benutzernamen oder Passwort.'
+      dialog:
+        title: 'Spracheinstellungen'
+        body: "Wählen Sie die Anzeigesprache.."
+        close: 'nah dran'
+    show:
+      title: 'Gespräch'
+      placeholder: 'eine Nachricht schreiben...'
+      send: 'Senden'
+      dialog:
+        title: 'Nue Gespräch'
+        body: 'Nach dem Austausch können zu sprechen beginnen mit der anderen Partei die folgende URL'
+        close: 'nah dran'
+  messages:
+    title: 'benutzer'

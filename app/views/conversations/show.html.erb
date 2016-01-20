@@ -1,0 +1,57 @@
+<h1 class="text-center">
+  <%= t '.title' %>
+</h1>
+<input id="user" type="hidden" value="<%=session[:key] %>">
+<input id="conversation" type="hidden" value="<%= @conversation.id %>">
+
+<div class="jumbotron">
+  <div class="input-group">
+    <input class="form-control" placeholder="<%= t '.placeholder' %>" id="input-send" type="text">
+    <span class="input-group-btn">
+      <button class="btn btn-default" id="send" type="button">
+        <%= t '.send' %>
+      </button>
+    </span>
+  </div>
+
+  <br>
+    <br>
+      <div id="messages">
+        <%= render @conversation.messages %>
+      </div>
+    </br>
+
+    <div class="modal fade" id="info" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <%= t '.dialog.title' %>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <p>
+              <%= t '.dialog.body' %>
+            </p>
+            <input class="form-control" id="fe_text" type="text" value="<%= conversation_url(@conversation, token: @conversation.token) %>" aria-describedby="basic-addon2">
+            <br/>
+            <div class="modal-footer">
+              <button class="btn btn-default" data-dismiss="modal" type="button">
+                <%= t '.dialog.close' %>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="hidden" data-target="#info" data-toggle="modal" id="open-model" type="button"></button>
+      <% if @popup %>
+          <script !src="">
+            $(document).ready(function() {
+             $('#open-model').click();
+            });
+          </script>
+      <% end %>
+    </div>
+  </br>
+</div>

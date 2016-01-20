@@ -1,0 +1,7 @@
+- cache message do
+  .panel.panel-default
+    .panel-heading
+      = t 'messages.title'
+      _#{message.user.token.first(6).downcase}
+    .panel-body
+      = message.content
