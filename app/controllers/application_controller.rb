@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   respond_to :html
   helper_method :current_user, :channel
   before_action :set_locale
+  skip_before_filter :verify_authenticity_token
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
