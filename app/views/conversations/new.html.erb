@@ -1,0 +1,59 @@
+<div class="jumbotron">
+  <h1 class="text-center">P-Chat</h1>
+  <p class="text-center">
+    <%= t '.title' %>
+  </p>
+  <%= simple_form_for @conversation do |f| %>
+    <%= f.button :submit, class: 'center-block btn btn-primary btn-lg' %>
+  <% end %>
+  <br>
+    <p class="text-center">
+      <%= t '.info' %>
+    </p>
+  </br>
+
+  <div class="modal fade" id="locale" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">
+            <%= t '.dialog.title' %>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <p class="text-center">
+            <%= t '.dialog.body' %>
+          </p>
+          <div class="text-center">
+            <div aria-label="..." class="btn-group" role="group">
+              <a href="/?locale=de">
+                <button class="btn btn-default btn-lg" type="button">Deutsch</button>
+              </a>
+              <a href="/?locale=en">
+                <button class="btn btn-default btn-lg" type="button">English</button>
+              </a>
+              <a href="/?locale=tr">
+                <button class="btn btn-default btn-lg" type="button">Türkçe</button>
+              </a>
+            </div>
+          </div>
+          <br/>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" type="button">
+              <%= t '.dialog.close' %>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="hidden" data-target="#locale" data-toggle="modal" id="open-model" type="button"></button>
+    <% if @locale %>
+        <script !src="">
+          $(document).ready(function() {
+            $('#open-model').click();
+          });
+        </script>
+    <% end %>
+  </div>
+</div>
