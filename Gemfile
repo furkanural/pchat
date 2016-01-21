@@ -31,7 +31,6 @@ gem 'haml-rails', '0.9.0'
 gem 'has_secure_token'
 gem 'rails-i18n'
 gem 'rails_12factor', group: :production
-gem 'rack-cors', :require => 'rack/cors'
 
 
 # Use ActiveModel has_secure_password
