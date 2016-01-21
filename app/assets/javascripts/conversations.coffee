@@ -5,11 +5,13 @@
 $(document).ready ->
 
   $('#send').on 'click', ->
-    App.conversation.speak $('#input-send').val(), $('#user').val(), $('#conversation').val()
-    $('#input-send').val('')
-
-  $('#input-send').on 'keypress', (event) ->
-    if event.keyCode is 13
+    if $('#input-send').val().length
       App.conversation.speak $('#input-send').val(), $('#user').val(), $('#conversation').val()
       $('#input-send').val('')
-      event.preventDefault()
+
+  $('#input-send').on 'keypress', (event) ->
+    if $('#input-send').val().length
+      if event.keyCode is 13
+        App.conversation.speak $('#input-send').val(), $('#user').val(), $('#conversation').val()
+        $('#input-send').val('')
+        event.preventDefault()

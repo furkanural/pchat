@@ -8,15 +8,7 @@ Bundler.require(*Rails.groups)
 
 module PChat
   class Application < Rails::Application
-    config.middleware.use Rack::Cors do
-      allow do
-        origins '*'
-        resource '*',
-                 :headers => :any,
-                 :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
-                 :methods => [:get, :post, :options, :delete, :put]
-      end
-    end
+  
     # Use the responders controller from the responders gem
     config.app_generators.scaffold_controller :responders_controller
 
