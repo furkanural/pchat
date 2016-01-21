@@ -5,6 +5,7 @@ de:
     new:
       title: 'Klicken Sie auf die Schaltfläche zum Erstellen eines Sprachkanal'
       info: 'Sie brauchen nicht einen Benutzernamen oder Passwort.'
+      pin: '*Geben Sie eine PIN 5 Zeichen'
       dialog:
         title: 'Spracheinstellungen'
         body: "Wählen Sie die Anzeigesprache.."
@@ -15,7 +16,11 @@ de:
       send: 'Senden'
       dialog:
         title: 'Nue Gespräch'
-        body: 'Nach dem Austausch können zu sprechen beginnen mit der anderen Partei die folgende URL'
+        body: 'Nach dem Austausch mit der anderen Partei an die folgende URL und wählen Sie ein Passwort, das Sie können zu sprechen beginnen'
         close: 'nah dran'
   messages:
     title: 'benutzer'
+  users:
+    show:
+      title: 'Geben Sie das Passwort von Ihrem Freund gesetzt..'
+      pin: '*Es besteht aus 5 Zeichen'
