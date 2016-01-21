@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <h1 class="text-center">P-Chat</h1>
+  <p class="text-center">
+    <%= t '.title' %>
+  </p>
+  <%= simple_form_for @user do |f| %>
+      <input id="conversation" type="hidden" name="conversation" value="<%= @conversation.token %>">
+      <div class="text-center"><%= t '.pin' %></div>
+      <div style="width: 200px;" class="center-block form-group">
+        <input style="font-size: x-large" class="string optional form-control" maxlength="5" type="password" name="pin" id="conversation_pin">
+      </div>
+      <input type="submit" name="commit" value="&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;" class="btn btn-default center-block btn btn-primary btn-lg" data-disable-with="Update User">
+  <% end %>
+  <br>
+
+</div>

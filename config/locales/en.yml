@@ -5,6 +5,7 @@ en:
     new:
       title: 'Click to button for create a speech channel'
       info: "You don't need a username or password."
+      pin: '*Enter a pin 5 characters'
       dialog:
         title: 'Language Settings'
         body: "Select the Display Language.."
@@ -15,7 +16,11 @@ en:
       send: 'Send'
       dialog:
         title: 'New Conversation'
-        body: 'After sharing can start talking with the other party the following URL'
+        body: 'After sharing with the other party to the following URL and select a password that you can start talking'
         close: 'Close'
   messages:
     title: 'user'
+  users:
+    show:
+      title: 'Enter the password set by your friend..'
+      pin: '*It consists of 5 characters'

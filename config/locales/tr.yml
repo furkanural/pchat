@@ -4,6 +4,7 @@ tr:
   conversations:
     new:
       title: 'Bir konuşma kanalı oluşturmak için dügmeye tıklayınız'
+      pin: '*5 karakterden bir pin giriniz'
       info: 'Kullanıcı adı veya şifreye gerek yok.'
       dialog:
         title: 'Dil Ayarları'
@@ -15,7 +16,12 @@ tr:
       send: 'Gönder'
       dialog:
         title: 'Yeni Konuşma'
-        body: "Aşağıdaki URL'i karşı taraf ile paylaştıktan sonra konuşmaya başlayabilirsiniz"
+        body: "Aşağıdaki URL'i ve belirlediğiniz şifreyi karşı taraf ile paylaştıktan sonra konuşmaya başlayabilirsiniz"
         close: 'Kapat'
   messages:
     title: 'kullanıcı'
+  users:
+    show:
+      title: 'Arkadaşınızın belirlediği şifreyi giriniz..'
+      pin: '*5 karakterden oluşmaktadır'
+

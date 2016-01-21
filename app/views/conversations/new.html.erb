@@ -4,7 +4,11 @@
     <%= t '.title' %>
   </p>
   <%= simple_form_for @conversation do |f| %>
-    <%= f.button :submit, class: 'center-block btn btn-primary btn-lg' %>
+      <div class="text-center"><%= t '.pin' %></div>
+      <div style="width: 200px;" class="center-block form-group">
+        <input style="font-size: x-large" class="string optional form-control" maxlength="5" type="password" name="conversation[pin]" id="conversation_pin">
+      </div>
+      <%= f.button :submit, class: 'center-block btn btn-primary btn-lg' %>
   <% end %>
   <br>
     <p class="text-center">
